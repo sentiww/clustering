@@ -1,5 +1,5 @@
 {
-  description = "Minimal flake that provides a Python env with pandas";
+  description = "Minimal flake that provides a Python env";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -21,6 +21,8 @@
               packages = [
                 (pkgs.python3.withPackages (ps: with ps; [
                   pandas
+                  ps."scikit-learn"
+                  matplotlib
                 ]))
               ];
             };
