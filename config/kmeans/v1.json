@@ -1,0 +1,11 @@
+{
+    "n_clusters": 1000,
+    "init": "k-means++",
+    "n_init": "auto",
+    "max_iter": 1000,
+    "tol": 0.0001,
+    "verbose": 0,
+    "random_state": null,
+    "copy_x": true,
+    "algorithm": "lloyd"
+}

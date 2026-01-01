@@ -3,15 +3,13 @@ from __future__ import annotations
 from pathlib import Path
 
 from common.metadata import NumpyEncoder
-from pipelines.config import KNNPipelineConfig
-from pipelines.knn_pipeline import KNNPipeline
+from pipelines.config import DBSCANPipelineConfig
+from pipelines.dbscan_pipeline import DBSCANPipeline
 
 
 def main() -> None:
-    """Entry point that configures and runs the KNN clustering pipeline."""
     work_dir = Path(__file__).resolve().parents[1]
     dataset_path = work_dir / "datasets" / "raw" / "bank-full.csv"
-    config_path = work_dir / "config" / "knn" / "v1.json"
     results_dir = work_dir / "results"
 
     feature_cols = [
@@ -32,7 +30,8 @@ def main() -> None:
         "poutcome",
     ]
 
-    config = KNNPipelineConfig.from_file(
+    config_path = work_dir / "config" / "dbscan" / "v1.json"
+    config = DBSCANPipelineConfig.from_file(
         config_path,
         dataset_path=dataset_path,
         results_dir=results_dir,
@@ -43,7 +42,7 @@ def main() -> None:
         random_state=0,
         stratify=True,
     )
-    pipeline = KNNPipeline(config, metadata_encoder=NumpyEncoder)
+    pipeline = DBSCANPipeline(config, metadata_encoder=NumpyEncoder)
     result = pipeline.run()
     print(f"Metadata saved to: {result['metadata_path']}")
     print(f"Model saved to: {result['model_path']}")
