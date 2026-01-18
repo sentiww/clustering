@@ -49,7 +49,7 @@ def feature_columns() -> list[str]:
 def run_knn(work_dir: Path) -> None:
     dataset_path = work_dir / "datasets" / "raw" / "bank-full.csv"
     results_dir = work_dir / "results"
-    config_path = work_dir / "config" / "knn" / "v1.json"
+    config_path = work_dir / "config" / "knn" / "default.json"
 
     config = KNNPipelineConfig.from_file(
         config_path,
@@ -70,7 +70,7 @@ def run_knn(work_dir: Path) -> None:
 def run_kmeans(work_dir: Path) -> None:
     dataset_path = work_dir / "datasets" / "raw" / "bank-full.csv"
     results_dir = work_dir / "results"
-    config_path = work_dir / "config" / "kmeans" / "v1.json"
+    config_path = work_dir / "config" / "kmeans" / "default.json"
 
     config = KMeansPipelineConfig.from_file(
         config_path,
@@ -91,7 +91,7 @@ def run_kmeans(work_dir: Path) -> None:
 def run_dbscan(work_dir: Path) -> None:
     dataset_path = work_dir / "datasets" / "raw" / "bank-full.csv"
     results_dir = work_dir / "results"
-    config_path = work_dir / "config" / "dbscan" / "v1.json"
+    config_path = work_dir / "config" / "dbscan" / "default.json"
 
     config = DBSCANPipelineConfig.from_file(
         config_path,
