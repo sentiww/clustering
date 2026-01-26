@@ -1,0 +1,25 @@
+{
+    "dataset": "bank-full",
+    "file": "datasets/raw/bank-full.csv",
+    "target": {
+        "name": "y",
+        "description": "Response to the marketing campaign (yes/no)."
+    },
+    "features": [
+        "age",
+        "job",
+        "education",
+        "default",
+        "balance",
+        "housing",
+        "loan",
+        "contact",
+        "day",
+        "month",
+        "duration",
+        "campaign",
+        "pdays",
+        "previous",
+        "poutcome"
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "dataset": "it_customer_churn",
+    "file": "datasets/it_customer_churn.csv",
+    "target": {
+        "name": "Churn",
+        "description": "Binary customer churn label (Yes/No)."
+    },
+    "features": [
+        "gender",
+        "SeniorCitizen",
+        "Partner",
+        "Dependents",
+        "tenure",
+        "PhoneService",
+        "MultipleLines",
+        "InternetService",
+        "OnlineSecurity",
+        "OnlineBackup",
+        "DeviceProtection",
+        "TechSupport",
+        "StreamingTV",
+        "StreamingMovies",
+        "Contract",
+        "PaperlessBilling",
+        "PaymentMethod",
+        "MonthlyCharges",
+        "TotalCharges"
+    ]
+}

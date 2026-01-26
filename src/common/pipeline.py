@@ -86,7 +86,9 @@ class ClusteringPipeline(ABC):
 
     def load_data(self) -> pd.DataFrame:
         """Load the dataset from disk."""
-        return pd.read_csv(self.dataset_path)
+        df = pd.read_csv(self.dataset_path)
+        df.columns = df.columns.str.strip()
+        return df
 
     def preprocess(self, df: pd.DataFrame) -> tuple:
         """Select feature columns, one-hot encode categoricals, and return numpy arrays."""

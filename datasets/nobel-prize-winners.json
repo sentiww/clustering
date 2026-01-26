@@ -1,0 +1,36 @@
+{
+    "dataset": "nobel-prize-winners",
+    "file": "datasets/nobel-prize-winners.csv",
+    "target": {
+        "name": "usa_born_winner",
+        "description": "Boolean indicating whether the laureate was born in the United States."
+    },
+    "features": [
+        "",
+        "year",
+        "category",
+        "prize",
+        "motivation",
+        "prize_share",
+        "laureate_id",
+        "laureate_type",
+        "full_name",
+        "birth_date",
+        "birth_city",
+        "birth_country",
+        "sex",
+        "organization_name",
+        "organization_city",
+        "organization_country",
+        "death_date",
+        "death_city",
+        "death_country",
+        "decade",
+        "female",
+        "age",
+        "age_group"
+    ],
+    "notes": {
+        "": "The CSV contains a leading unnamed column that stores the numeric row index from the source export."
+    }
+}
